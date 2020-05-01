@@ -2,18 +2,19 @@
 
 namespace Allegiance.Blazor.Highcharts.Options
 {
-    public partial class PlotOptionsSeries
+    public partial class PlotOptionsBar
     {
         [JsonProperty("label", NullValueHandling = NullValueHandling.Ignore)]
         public Label Label { get; set; }
-        [JsonProperty("marker", NullValueHandling = NullValueHandling.Ignore)]
-        public Marker Marker { get; set; }
+        [JsonProperty("dataLabels", NullValueHandling = NullValueHandling.Ignore)]
+        public Labels DataLabels { get; set; }
+
+
         [JsonProperty("pointStart", NullValueHandling = NullValueHandling.Ignore)]
         public long? PointStart { get; set; }
         [JsonProperty("fillOpacity", NullValueHandling = NullValueHandling.Ignore)]
         public double? FillOpacity { get; set; }
-        [JsonProperty("stacking", NullValueHandling = NullValueHandling.Ignore)]
-        public string Stacking { get; set; }
+
         [JsonProperty("pointWidth", NullValueHandling = NullValueHandling.Ignore)]
         public int? PointWidth { get; set; }
         [JsonProperty("lineWidth", NullValueHandling = NullValueHandling.Ignore)]
@@ -23,18 +24,13 @@ namespace Allegiance.Blazor.Highcharts.Options
         [JsonProperty("animation", NullValueHandling = NullValueHandling.Ignore)]
         public Animation Animation { get; set; }
 
-
-
-        public PlotOptionsSeries()
+        public PlotOptionsBar()
         {
 
         }
 
-        public PlotOptionsSeries(Label label = null, long? pointStart = null, int? pointwidth = null)
-        {
-            Label = label;
-            PointStart = pointStart;
-            PointWidth = pointwidth;
-        }
+
+
+
     }
 }

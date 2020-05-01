@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 
 namespace Allegiance.Blazor.Highcharts.Options
 {
@@ -9,9 +9,15 @@ namespace Allegiance.Blazor.Highcharts.Options
 
         [JsonProperty("showInLegend", NullValueHandling = NullValueHandling.Ignore)]
         public bool? ShowInLegend { get; set; }
+        [JsonProperty("borderColor", NullValueHandling = NullValueHandling.Ignore)]
+        public string BorderColor { get; set; }
+        [JsonProperty("borderWidth", NullValueHandling = NullValueHandling.Ignore)]
+        public int BorderWidth { get; set; }
 
         [JsonProperty("cursor", NullValueHandling = NullValueHandling.Ignore)]
         public string Cursor { get; set; }
+        [JsonProperty("center", NullValueHandling = NullValueHandling.Ignore)]
+        public string[] Center { get; set; }
 
         [JsonProperty("dataLabels", NullValueHandling = NullValueHandling.Ignore)]
         public Labels DataLabels { get; set; }
